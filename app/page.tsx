@@ -1,6 +1,7 @@
 'use client'
 
 import { Create } from '@/app/components/Create'
+import { Mint } from '@/app/components/Mint'
 import { Nav } from '@/app/components/Nav'
 import { useState } from 'react'
 
@@ -12,7 +13,7 @@ export default function Home() {
       case 'create':
         return <Create />
       case 'mint':
-        return <div>Mint Content</div>
+        return <Mint />
       case 'buy':
         return <div>Buy Content</div>
       case 'sell':
