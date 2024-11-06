@@ -9,12 +9,17 @@ const SectionHeader = ({ children }: SectionHeaderProps) => (
 interface ActionButtonProps {
   children: React.ReactNode
   onClick?: () => void
+  isSelected?: boolean
 }
 
-const ActionButton = ({ children, onClick }: ActionButtonProps) => (
+const ActionButton = ({ children, onClick, isSelected }: ActionButtonProps) => (
   <button
     onClick={onClick}
-    className="w-full text-2xl rounded border-2 border-black px-8 py-4 text-center hover:border-gray-400 hover:text-gray-400"
+    className={`w-full text-2xl rounded border-2 px-8 py-4 text-center transition-colors ${
+      isSelected
+        ? 'border-black bg-black text-white hover:bg-gray-900'
+        : 'border-black hover:border-gray-400 hover:text-gray-400'
+    }`}
   >
     {children}
   </button>
@@ -41,7 +46,12 @@ const Section = ({ title, children, className = '' }: SectionProps) => (
   </div>
 )
 
-export const Nav = () => {
+interface NavProps {
+  onSelectView: (view: string) => void
+  selectedView: string
+}
+
+export const Nav = ({ onSelectView, selectedView }: NavProps) => {
   return (
     <div className="flex flex-col gap-8 p-6">
       <div className="flex items-center gap-4">
@@ -49,14 +59,34 @@ export const Nav = () => {
       </div>
 
       <Section title="Creator Client">
-        <ActionButton>Create</ActionButton>
+        <ActionButton
+          isSelected={selectedView === 'create'}
+          onClick={() => onSelectView('create')}
+        >
+          Create
+        </ActionButton>
       </Section>
 
       <Section title="Collector Client" className="mt-8">
         <ButtonGroup>
-          <ActionButton>Mint</ActionButton>
-          <ActionButton>Buy on Secondary</ActionButton>
-          <ActionButton>Sell on Secondary</ActionButton>
+          <ActionButton
+            isSelected={selectedView === 'mint'}
+            onClick={() => onSelectView('mint')}
+          >
+            Mint
+          </ActionButton>
+          <ActionButton
+            isSelected={selectedView === 'buy'}
+            onClick={() => onSelectView('buy')}
+          >
+            Buy on Secondary
+          </ActionButton>
+          <ActionButton
+            isSelected={selectedView === 'sell'}
+            onClick={() => onSelectView('sell')}
+          >
+            Sell on Secondary
+          </ActionButton>
         </ButtonGroup>
       </Section>
     </div>

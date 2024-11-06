@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Footer } from '@/app/components/Footer'
 import { Header } from '@/app/components/Header'
-import { Nav } from '@/app/components/Nav'
 import Providers from '@/app/providers'
 import localFont from 'next/font/local'
 
@@ -47,14 +46,7 @@ export default function RootLayout({
       <body className={arialNarrow.className}>
         <Providers>
           <Header />
-          <div className="flex min-h-screen w-full max-w-screen-2xl flex-col gap-6 p-6 md:flex-row">
-            <div className="w-full rounded-lg p-4 md:w-1/3">
-              <Nav />
-            </div>
-            <div className="w-full rounded-lg p-4 md:w-2/3">
-              <h2 className="text-lg font-semibold"> {children}</h2>
-            </div>
-          </div>
+          {children}
           <Footer />
         </Providers>
       </body>

@@ -6,7 +6,6 @@ export const privyConfig: PrivyClientConfig = {
   supportedChains: [baseSepolia],
   loginMethods: ['wallet'],
   appearance: {
-    showWalletLoginFirst: false,
     theme: 'light',
   },
 }

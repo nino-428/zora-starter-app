@@ -21,7 +21,7 @@ A minimal implementation showcasing Zora's SDK. This project demonstrates how to
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/zora-starter-app.git
+git clone https://github.com/ourzora/zora-starter-app.git
 ```
 
 2. Install dependencies:
@@ -83,7 +83,12 @@ This is a starter template for building with Zora's SDKs. Feel free to fork and 
 
 - [Zora Documentation](https://docs.zora.co/)
 - [Next.js Documentation](https://nextjs.org/docs)
-- [WalletConnect Documentation](https://docs.walletconnect.com/)
+- [Privy Documentation](https://docs.privy.io/)
+- [Pinata Documentation](https://docs.pinata.cloud/quickstart)
+
+## Check it out
+
+Play with it live on [https://zora-starter-app-git-main.preview.ourzora.com](https://zora-starter-app-git-main.preview.ourzora.com)
 
 ## Deploy on Vercel
 
