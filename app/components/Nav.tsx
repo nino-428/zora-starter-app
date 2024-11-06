@@ -15,7 +15,7 @@ interface ActionButtonProps {
 const ActionButton = ({ children, onClick, isSelected }: ActionButtonProps) => (
   <button
     onClick={onClick}
-    className={`w-full text-2xl rounded border-2 px-8 py-4 text-center transition-colors ${
+    className={`w-full text-2xl border-2 px-8 py-4 text-center transition-colors ${
       isSelected
         ? 'border-black bg-black text-white hover:bg-gray-900'
         : 'border-black hover:border-gray-400 hover:text-gray-400'

@@ -133,7 +133,7 @@ export function Create() {
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-2xl mx-auto p-4">
       <div className="mb-6">
         <div
-          className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center cursor-pointer"
+          className="border-2 border-dashed border-gray-300  p-4 text-center cursor-pointer"
           onClick={() => document.getElementById('image-upload')?.click()}
         >
           {imagePreview ? (
@@ -141,7 +141,7 @@ export function Create() {
               <img
                 src={imagePreview}
                 alt="Preview"
-                className="w-full h-auto rounded-lg"
+                className="w-full h-auto "
               />
             </div>
           ) : (
@@ -167,7 +167,7 @@ export function Create() {
         <input
           type="text"
           placeholder="Post title"
-          className="w-full p-2 border border-gray-300 rounded-lg"
+          className="w-full p-2 border border-gray-300 "
           {...register('title', {
             required: 'Title is required',
           })}
@@ -180,7 +180,7 @@ export function Create() {
       <div className="mb-6">
         <textarea
           placeholder="Description"
-          className="w-full p-2 border border-gray-300 rounded-lg"
+          className="w-full p-2 border border-gray-300 "
           rows={4}
           {...register('description', {
             required: 'Description is required',
@@ -194,7 +194,7 @@ export function Create() {
       <button
         type={authenticated ? 'submit' : 'button'}
         disabled={isSubmitting}
-        className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 disabled:bg-gray-400 disabled:cursor-not-allowed"
+        className="w-full bg-black text-white py-3  hover:bg-gray-800 disabled:bg-gray-400 disabled:cursor-not-allowed"
         onClick={!authenticated ? login : () => {}}
       >
         {isSubmitting ? 'Creating...' : 'Create'}

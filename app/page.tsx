@@ -1,8 +1,10 @@
 'use client'
 
+import { Buy } from '@/app/components/Buy'
 import { Create } from '@/app/components/Create'
 import { Mint } from '@/app/components/Mint'
 import { Nav } from '@/app/components/Nav'
+import { Sell } from '@/app/components/Sell'
 import { useState } from 'react'
 
 export default function Home() {
@@ -15,9 +17,9 @@ export default function Home() {
       case 'mint':
         return <Mint />
       case 'buy':
-        return <div>Buy Content</div>
+        return <Buy />
       case 'sell':
-        return <div>Sell Content</div>
+        return <Sell />
       default:
         return null
     }
@@ -27,14 +29,14 @@ export default function Home() {
     <div className="min-h-screen w-full max-w-screen-2xl mx-auto">
       <div className="grid md:grid-cols-[minmax(300px,500px)_1fr]">
         <aside className="md:fixed md:w-[500px] pt-20">
-          <div className="rounded-lg p-4">
+          <div className=" p-4">
             <Nav onSelectView={setSelectedView} selectedView={selectedView} />
           </div>
         </aside>
 
         <main className="md:col-start-2 pt-20">
           <div className="p-6 pt-20">
-            <div className="rounded-lg p-4 pb-16">{renderContent()}</div>
+            <div className=" p-4 pb-16">{renderContent()}</div>
           </div>
         </main>
       </div>
