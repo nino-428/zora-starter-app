@@ -34,6 +34,20 @@ const arialNarrow = localFont({
 export const metadata: Metadata = {
   title: 'Zora Starter App',
   description: 'Get started with Zora',
+  openGraph: {
+    images: {
+      url: '/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'Zora Starter App',
+    },
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zora Starter App',
+    description: 'Get started with Zora',
+    images: ['/og-image.png'],
+  },
 }
 
 export default function RootLayout({
