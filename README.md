@@ -2,11 +2,13 @@
 
 A minimal implementation showcasing Zora's SDK. This project demonstrates how to build a simple Zora client using Zora's SDKs, focusing on essential features for NFT minting, collecting, buying and selling.
 
+Play with it live on [https://zora-starter-app-git-main.preview.ourzora.com](https://zora-starter-app-git-main.preview.ourzora.com)
+
 ## Features
 
 ### Creator Client
 
-- Create ERC1155 tokens (Timed editions)
+- Create ERC1155 tokens ([Timed editions](https://docs.zora.co/contracts/ZoraTimedSaleStrategy))
 - IPFS file uploading for NFT media
 - Metadata form for token details
 
@@ -85,10 +87,6 @@ This is a starter template for building with Zora's SDKs. Feel free to fork and 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Privy Documentation](https://docs.privy.io/)
 - [Pinata Documentation](https://docs.pinata.cloud/quickstart)
-
-## Check it out
-
-Play with it live on [https://zora-starter-app-git-main.preview.ourzora.com](https://zora-starter-app-git-main.preview.ourzora.com)
 
 ## Deploy on Vercel
 
